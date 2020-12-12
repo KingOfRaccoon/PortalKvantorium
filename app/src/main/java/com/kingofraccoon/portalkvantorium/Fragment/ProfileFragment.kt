@@ -17,6 +17,10 @@ import com.kingofraccoon.portalkvantorium.adapters.ViewPagerAdapter
 
 class ProfileFragment: Fragment() {
 
+    companion object{
+        val tag = "fragmentprofile"
+    }
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,

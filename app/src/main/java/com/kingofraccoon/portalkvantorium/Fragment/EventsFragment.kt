@@ -23,6 +23,10 @@ import java.util.*
 import androidx.fragment.app.FragmentManager as FragmentManager1
 
 class EventsFragment: Fragment() {
+
+    companion object{
+        val tag = "fragmentevent"
+    }
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -40,7 +44,7 @@ class EventsFragment: Fragment() {
         eventAdapter.addEvent(
             Event(
                 "dlfsdkfl",
-                "dlfdsf;sdlfsd;",
+                 "dlfdsf;sdlfsd;",
                 "${Date().date}",
                 "13.00"
             )
