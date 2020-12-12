@@ -5,6 +5,8 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.kingofraccoon.portalkvantorium.Fragment.EventsFragment
+import com.kingofraccoon.portalkvantorium.Fragment.ProfileFragment
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,7 +21,7 @@ class MainActivity : AppCompatActivity() {
 
                 R.id.chat -> {}
 
-                R.id.profile -> {}
+                R.id.profile -> supportFragmentManager.setFragment(ProfileFragment())
             }
             return@setOnNavigationItemSelectedListener true
         }

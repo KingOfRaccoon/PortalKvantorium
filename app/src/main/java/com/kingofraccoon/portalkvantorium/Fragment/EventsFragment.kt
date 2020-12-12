@@ -1,4 +1,4 @@
-package com.kingofraccoon.portalkvantorium
+package com.kingofraccoon.portalkvantorium.Fragment
 
 import android.os.Build
 import android.os.Bundle
@@ -10,6 +10,8 @@ import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.kingofraccoon.portalkvantorium.Event
+import com.kingofraccoon.portalkvantorium.R
 import com.kingofraccoon.portalkvantorium.adapters.EventAdapter
 import com.kingofraccoon.portalkvantorium.adapters.SimpleItemTouchHelperCallback
 import java.time.LocalDate
