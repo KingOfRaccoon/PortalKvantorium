@@ -6,6 +6,7 @@ class Event(){
     var date = ""
     var time = ""
 
+
     constructor(
         title: String,
         text: String,

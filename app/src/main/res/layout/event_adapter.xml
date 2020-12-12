@@ -4,6 +4,8 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     app:cardCornerRadius="8dp"
+    android:id="@+id/event_card"
+    android:background="@color/white"
     android:layout_marginTop="15dp"
     android:layout_marginLeft="15dp"
     android:layout_marginRight="15dp"
@@ -18,10 +20,9 @@
         <ImageView
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/check"
-            android:layout_marginTop="5dp"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/check_one"
             android:layout_gravity="center_vertical"
             android:id="@+id/icon"/>
 
@@ -96,9 +97,6 @@
             android:dividerHeight="1dp"
             android:background="#FFF"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/linear" />
+            android:layout_height="wrap_content" />
     </LinearLayout>
 </androidx.cardview.widget.CardView>

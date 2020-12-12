@@ -5,11 +5,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
+import androidx.cardview.widget.CardView
+import androidx.fragment.app.FragmentManager
 import androidx.recyclerview.widget.RecyclerView
 import com.kingofraccoon.portalkvantorium.Event
+import com.kingofraccoon.portalkvantorium.Fragment.MoreEventFragment
 import com.kingofraccoon.portalkvantorium.R
 
-class EventAdapter: RecyclerView.Adapter<EventAdapter.Companion.EventViewHolder>(), ItemTouchHelperAdapter {
+class EventAdapter(var fragmentManager: FragmentManager): RecyclerView.Adapter<EventAdapter.Companion.EventViewHolder>(), ItemTouchHelperAdapter {
     var listEvents = mutableListOf<Event>()
 
     fun setList(mutableList: MutableList<Event>){
@@ -29,7 +32,8 @@ class EventAdapter: RecyclerView.Adapter<EventAdapter.Companion.EventViewHolder>
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): EventViewHolder {
         return EventViewHolder(
             LayoutInflater.from(parent.context)
-                .inflate(R.layout.event_adapter, parent, false)
+                .inflate(R.layout.event_adapter, parent, false),
+            fragmentManager
         )
     }
 
@@ -40,12 +44,19 @@ class EventAdapter: RecyclerView.Adapter<EventAdapter.Companion.EventViewHolder>
     override fun getItemCount(): Int = listEvents.size
 
     companion object{
-        class EventViewHolder(view: View) : RecyclerView.ViewHolder(view){
+        class EventViewHolder(view: View, var fragmentManager: FragmentManager) : RecyclerView.ViewHolder(view){
             val event_title : TextView = view.findViewById(R.id.event_title)
             val event_date : TextView = view.findViewById(R.id.event_date)
             val event_time : TextView = view.findViewById(R.id.event_time)
+            val event_card : CardView = view.findViewById(R.id.event_card)
 
             fun onBind(event: Event){
+                event_card.setOnClickListener {
+                    fragmentManager.beginTransaction()
+                        .add(R.id.frame, MoreEventFragment.newInstance(event))
+                        .addToBackStack(null)
+                        .commit()
+                }
                 event_title.text = event.title
                 event_date.text = event.date
                 event_time.text = event.time
@@ -56,7 +67,7 @@ class EventAdapter: RecyclerView.Adapter<EventAdapter.Companion.EventViewHolder>
     override fun onItemMove(fromPosition: Int, toPosition: Int) {
         if (fromPosition < toPosition) {
             for (i in fromPosition..toPosition) {
-                listEvents = replace(listEvents, i, i + 1)
+                listEvents = replace(listEvents, i, i+1)
 
             }
         }

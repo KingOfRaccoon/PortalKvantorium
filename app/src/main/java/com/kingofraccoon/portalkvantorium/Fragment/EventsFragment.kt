@@ -15,6 +15,7 @@ import com.kingofraccoon.portalkvantorium.R
 import com.kingofraccoon.portalkvantorium.adapters.EventAdapter
 import com.kingofraccoon.portalkvantorium.adapters.SimpleItemTouchHelperCallback
 import java.time.LocalDate
+import androidx.fragment.app.FragmentManager as FragmentManager1
 
 class EventsFragment: Fragment() {
     @RequiresApi(Build.VERSION_CODES.O)
@@ -25,7 +26,7 @@ class EventsFragment: Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.events_fragment, container, false)
         val recyclerView : RecyclerView = view.findViewById(R.id.recycler_event)
-        val eventAdapter = EventAdapter()
+        val eventAdapter = EventAdapter(requireFragmentManager())
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.adapter = eventAdapter
         eventAdapter.addEvent(

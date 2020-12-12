@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/white"
     android:layout_width="match_parent"
@@ -51,7 +50,7 @@
                     android:paddingLeft="4dp"
                     android:paddingRight="8dp"
                     android:text="ФИО: "
-                    android:textColor="@color/black"
+                    android:textColor="@color/tx_grey"
                     android:textSize="14sp"
                     android:textStyle="bold" />
                 <TextView
@@ -60,7 +59,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Филонов Сергей Сергеевич"
-                    android:textColor="@color/black"
+                    android:textColor="@color/tx_grey"
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -79,7 +78,7 @@
                     android:paddingLeft="4dp"
                     android:paddingRight="8dp"
                     android:text="Дата рождения: "
-                    android:textColor="@color/black"
+                    android:textColor="@color/tx_grey"
                     android:textSize="14sp"
                     android:textStyle="bold" />
                 <TextView
@@ -88,7 +87,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="26.01.2003"
-                    android:textColor="@color/black"
+                    android:textColor="@color/tx_grey"
                     android:textSize="14sp" />
             </LinearLayout>
             <LinearLayout
@@ -104,7 +103,7 @@
                     android:paddingLeft="4dp"
                     android:paddingRight="8dp"
                     android:text="Пол: "
-                    android:textColor="@color/black"
+                    android:textColor="@color/tx_grey"
                     android:textSize="14sp"
                     android:textStyle="bold" />
                 <TextView
@@ -113,7 +112,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="мужской"
-                    android:textColor="@color/black"
+                    android:textColor="@color/tx_grey"
                     android:textSize="14sp" />
 
             </LinearLayout>
@@ -130,8 +129,8 @@
                     android:paddingStart="4dp"
                     android:paddingLeft="4dp"
                     android:paddingRight="8dp"
-                    android:text="Квант: "
-                    android:textColor="@color/black"
+                    android:text="Квантум: "
+                    android:textColor="@color/tx_grey"
                     android:textSize="14sp"
                     android:textStyle="bold" />
                 <TextView
@@ -139,8 +138,8 @@
                     android:id="@+id/kvant"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="IT-квантум"
-                    android:textColor="@color/black"
+                    android:text="IT"
+                    android:textColor="@color/tx_grey"
                     android:textSize="14sp" />
             </LinearLayout>
             <LinearLayout
@@ -157,7 +156,7 @@
                     android:paddingLeft="4dp"
                     android:paddingRight="8dp"
                     android:text="Группа: "
-                    android:textColor="@color/black"
+                    android:textColor="@color/tx_grey"
                     android:textSize="14sp"
                     android:textStyle="bold" />
                 <TextView
@@ -166,11 +165,27 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="ИТКБ"
-                    android:textColor="@color/black"
+                    android:textColor="@color/tx_grey"
                     android:textSize="14sp" />
             </LinearLayout>
         </LinearLayout>
     </LinearLayout>
 
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/view_pager2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_pager2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
