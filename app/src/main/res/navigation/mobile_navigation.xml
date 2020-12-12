@@ -5,9 +5,5 @@
     android:id="@+id/mobile_navigation"
     app:startDestination="@id/mainActivity">
 
-    <activity
-        android:id="@+id/mainActivity"
-        android:name="com.kingofraccoon.portalkvantorium.MainActivity"
-        android:label="activity_main"
-        tools:layout="@layout/activity_main" />
+
 </navigation>
