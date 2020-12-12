@@ -54,17 +54,29 @@ class EventAdapter: RecyclerView.Adapter<EventAdapter.Companion.EventViewHolder>
     }
 
     override fun onItemMove(fromPosition: Int, toPosition: Int) {
-        if (fromPosition < toPosition){
-            // свайп влево
-            Log.d("Swipe", "Влево")
+        if (fromPosition < toPosition) {
+            for (i in fromPosition..toPosition) {
+                listEvents = replace(listEvents, i, i + 1)
+
+            }
         }
         else{
-            // свайп вправо
-            Log.d("Swipe", "Вправо")
+            for (i in fromPosition downTo toPosition step 1){
+                listEvents = replace(listEvents, i, i+1)
+            }
         }
+        notifyItemMoved(fromPosition, toPosition)
     }
 
     override fun onItemDismiss(position: Int) {
-        TODO("Not yet implemented")
+        listEvents.removeAt(position)
+        notifyItemRemoved(position)
+    }
+    fun replace(list: MutableList<Event>, fromPosition: Int, toPosition: Int):MutableList<Event>{
+        val firstPair = list[fromPosition]
+        val secondPair = list[toPosition]
+        list[fromPosition] = secondPair
+        list[toPosition] = firstPair
+        return list
     }
 }
