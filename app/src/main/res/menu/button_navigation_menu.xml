@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/timetable"
+        android:icon="@drawable/event_note_24"
+        android:title="@string/timetable"
+        />
+    <item
+        android:id="@+id/fest"
+        android:title="@string/fest"
+        android:icon="@drawable/dashboard_24"/>
+    <item
+        android:id="@+id/chat"
+        android:title="@string/chat"
+        android:icon="@drawable/chat_24"/>
+    <item
+        android:id="@+id/profile"
+        android:title="@string/profile"
+        android:icon="@drawable/person_24"/>
+</menu>
