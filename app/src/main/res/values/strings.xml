@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">PortalKvantorium</string>
-    <string name="title_activity_main2">MainActivity</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="timetable">Расписание</string>
+    <string name="profile">Профиль</string>
+    <string name="fest">Мероприятия</string>
+    <string name="chat">Чат</string>
 </resources>
