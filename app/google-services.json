@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "150244771209",
+    "project_id": "portalkvantorium",
+    "storage_bucket": "portalkvantorium.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:150244771209:android:4c69e940ef8ae8e8f60d58",
+        "android_client_info": {
+          "package_name": "com.kingofraccoon.portalkvantorium"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "150244771209-078i04ldieps1a50sc2fva9skg1acouc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCoktvI4KeDDStI2VxDr0l_m2XZL6B-piE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "150244771209-078i04ldieps1a50sc2fva9skg1acouc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
