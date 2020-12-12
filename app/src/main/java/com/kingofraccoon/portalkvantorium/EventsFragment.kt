@@ -34,6 +34,14 @@ class EventsFragment: Fragment() {
                 "13.00"
             )
         )
+        eventAdapter.addEvent(
+            Event(
+                "dlfsdkfl",
+                "dlfdsf;sdlfsd;",
+                "${LocalDate.now()}",
+                "13.00"
+            )
+        )
         val callback = SimpleItemTouchHelperCallback(eventAdapter)
         ItemTouchHelper(callback).attachToRecyclerView(recyclerView)
         return view
