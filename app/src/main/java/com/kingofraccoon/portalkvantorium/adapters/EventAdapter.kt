@@ -62,9 +62,11 @@ class EventAdapter: RecyclerView.Adapter<EventAdapter.Companion.EventViewHolder>
             // свайп вправо
             Log.d("Swipe", "Вправо")
         }
+        notifyItemMoved(fromPosition, toPosition)
     }
 
     override fun onItemDismiss(position: Int) {
-        TODO("Not yet implemented")
+        listEvents.removeAt(position)
+        notifyItemRemoved(position)
     }
 }
