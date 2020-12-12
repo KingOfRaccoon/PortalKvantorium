@@ -12,6 +12,8 @@
     <color name="black">#E5D4CE</color>
     <color name="white">#FFFFFFFF</color>
 
+    <color name="tx_grey">#4E4E4E</color>
+
     <color name="kv_green">#72b53f</color>
     <color name="kv_green_black">#2d7d3a</color>
     <color name="kv_red">#e74827</color>
