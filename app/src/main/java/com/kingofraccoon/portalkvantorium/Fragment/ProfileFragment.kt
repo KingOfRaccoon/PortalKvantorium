@@ -33,7 +33,7 @@ class ProfileFragment: Fragment() {
         val dateUser: TextView = view.findViewById(R.id.about)
         val sexUser: TextView = view.findViewById(R.id.sex)
         nameUser.text = "Филонов Сергей Сергеевич"
-        dateUser.text = "14-02-1981"
+        dateUser.text = "14-02-2003"
         sexUser.text = "Мужской"
 
 /*        val viewPager2 : ViewPager2 = view.findViewById(R.id.view_pager2)
