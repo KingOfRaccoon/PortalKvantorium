@@ -11,7 +11,9 @@ import androidx.fragment.app.FragmentManager
 import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.tabs.TabLayout
+import com.google.android.material.tabs.TabLayoutMediator
 import com.kingofraccoon.portalkvantorium.R
+import com.kingofraccoon.portalkvantorium.adapters.ViewPager2FragmentAdapter
 import com.kingofraccoon.portalkvantorium.adapters.ViewPagerAdapter
 
 
@@ -38,12 +40,16 @@ class ProfileFragment: Fragment() {
         viewPager2.adapter = ViewPagerAdapter(this)*/
 
         val tabs : TabLayout = view.findViewById(R.id.tab_layout)
-        val viewPager2 : ViewPager = view.findViewById(R.id.view_pager2)
-
-        val viewPagerAdapter = ViewPagerAdapter(requireContext(), requireFragmentManager())
-        viewPager2.adapter = viewPagerAdapter
-
-        tabs.setupWithViewPager(viewPager2 as ViewPager)
+        val viewPager2 : ViewPager2 = view.findViewById(R.id.view_pager2)
+        viewPager2.adapter = ViewPager2FragmentAdapter(this)
+        TabLayoutMediator(tabs, viewPager2){ tab: TabLayout.Tab, i: Int ->
+            when(i){
+                0 -> tab.text = "Навыки"
+                1 -> tab.text = "Достижения"
+            }
+            viewPager2.currentItem = i
+        }.attach()
+        viewPager2.currentItem = 0
 
         return view
     }

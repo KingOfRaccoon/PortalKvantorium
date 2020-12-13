@@ -18,4 +18,8 @@
 
     <string name="tab_text_1">Навыки</string>
     <string name="tab_text_2">Достижения</string>
+
+    <string name="prog">Программирование: </string>
+    <string name="model">Моделирование: </string>
+    <string name="konstr">Конструирование: </string>
 </resources>
