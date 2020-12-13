@@ -13,6 +13,7 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="tx_grey">#4E4E4E</color>
+    <color name="background">#e8edff</color>
 
     <color name="kv_green">#72b53f</color>
     <color name="kv_green_black">#2d7d3a</color>

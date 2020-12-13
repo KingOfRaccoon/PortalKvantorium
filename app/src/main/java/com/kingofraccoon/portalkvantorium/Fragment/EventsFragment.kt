@@ -61,6 +61,26 @@ class EventsFragment: Fragment() {
                 R.drawable.kvantoriada
             )
         )
+        eventAdapter.addEvent(
+            Event(
+                "Реальный сектор",
+                "Межрегиональный конкурс технологических кейсов",
+                "${Date().date}",
+                "${Date().date}",
+                "18.00",
+                R.drawable.real_sector
+            )
+        )
+        eventAdapter.addEvent(
+            Event(
+                "Цифровой прорыв",
+                "Хакатон бла бла бла бла бла",
+                "${Date().date}",
+                "${Date().date}",
+                "11.00",
+                R.drawable.cifra
+            )
+        )
         val callback = SimpleItemTouchHelperCallback(eventAdapter)
         ItemTouchHelper(callback).attachToRecyclerView(recyclerView)
         return view
