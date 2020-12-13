@@ -172,6 +172,7 @@
     </LinearLayout>
 
     <com.google.android.material.tabs.TabLayout
+        app:tabTextColor="@color/tx_grey"
         android:id="@+id/tab_layout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

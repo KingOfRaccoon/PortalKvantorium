@@ -16,7 +16,6 @@ class ScheduleFragment: Fragment(){
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         return WebView(requireContext()).apply { loadUrl("file:///android_asset/index.html") }
     }
 }
