@@ -56,7 +56,7 @@ class EventAdapter(var fragmentManager: FragmentManager): RecyclerView.Adapter<E
             fun onBind(event: Event){
                 event_card.setOnClickListener {
                     fragmentManager.beginTransaction()
-                        .add(R.id.frame, MoreEventFragment.newInstance(event))
+                        .replace(R.id.frame, MoreEventFragment.newInstance(event))
                         .addToBackStack(null)
                         .commit()
                 }
@@ -77,7 +77,7 @@ class EventAdapter(var fragmentManager: FragmentManager): RecyclerView.Adapter<E
             }
         }
         else{
-            for (i in fromPosition downTo toPosition-1 step 1){
+            for (i in toPosition downTo fromPosition step 1){
                 listEvents = replace(listEvents, i, i+1)
             }
         }
