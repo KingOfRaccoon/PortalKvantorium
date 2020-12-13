@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity() {
             }
             return@setOnNavigationItemSelectedListener true
         }
+        supportFragmentManager.setFragment(ScheduleFragment(), ScheduleFragment.tag)
 
         val actBar = SpannableString(title)
         actBar.setSpan(ForegroundColorSpan(Color.rgb(78, 78, 78)), 0, title.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
