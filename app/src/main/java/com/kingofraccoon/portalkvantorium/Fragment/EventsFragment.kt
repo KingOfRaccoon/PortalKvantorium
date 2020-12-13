@@ -43,18 +43,22 @@ class EventsFragment: Fragment() {
         recyclerView.adapter = eventAdapter
         eventAdapter.addEvent(
             Event(
-                "dlfsdkfl",
-                 "dlfdsf;sdlfsd;",
+                "IT-Fest",
+                 "Открытый межрегиональный фестиваль информационных технологий «IT-Fest» в городе Севастополе.",
                 "${Date().date}",
-                "13.00"
+                "${Date().date}",
+                "13.00",
+                R.drawable.it_fest
             )
         )
         eventAdapter.addEvent(
             Event(
-                "dlfsdkfl",
-                "dlfdsf;sdlfsd;",
+                "Кванориада",
+                "Международное командное соревнование, участниками которого являются школьники до 18 лет, интересующиеся инженерным творчеством и изобретательством.",
                 "${Date().date}",
-                "13.00"
+                "${Date().date}",
+                "13.00",
+                R.drawable.kvantoriada
             )
         )
         val callback = SimpleItemTouchHelperCallback(eventAdapter)

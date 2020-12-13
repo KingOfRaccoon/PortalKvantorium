@@ -4,6 +4,7 @@ import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.cardview.widget.CardView
 import androidx.fragment.app.FragmentManager
@@ -48,6 +49,8 @@ class EventAdapter(var fragmentManager: FragmentManager): RecyclerView.Adapter<E
             val event_title : TextView = view.findViewById(R.id.event_title)
             val event_date : TextView = view.findViewById(R.id.event_date)
             val event_time : TextView = view.findViewById(R.id.event_time)
+            val event_date_end : TextView = view.findViewById(R.id.event_date_end)
+            val image : ImageView = view.findViewById(R.id.icon)
             val event_card : CardView = view.findViewById(R.id.event_card)
 
             fun onBind(event: Event){
@@ -59,7 +62,9 @@ class EventAdapter(var fragmentManager: FragmentManager): RecyclerView.Adapter<E
                 }
                 event_title.text = event.title
                 event_date.text = event.date
+                event_date_end.text = event.date_end
                 event_time.text = event.time
+                image.setImageResource(event.image)
             }
         }
     }

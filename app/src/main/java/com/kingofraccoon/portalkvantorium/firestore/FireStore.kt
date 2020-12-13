@@ -15,8 +15,9 @@ class FireStore {
             "title" to event.title,
             "text" to event.text,
             "date" to event.date,
+            "date_end" to event.date_end,
             "time" to event.time,
-            "uri" to event.uri.toString()
+            "image" to event.image
         )
         fireStore.collection(tag_events)
             .document(event.title)

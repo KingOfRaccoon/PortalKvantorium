@@ -70,14 +70,15 @@ class MainActivityLoadPhoto : AppCompatActivity() {
         super.onActivityResult(requestCode, resultCode, data)
         if (resultCode == RESULT_OK && requestCode == image_pick_code){
             image.setImageURI(data?.data)
-            FireStore().writeEvent(
+            /*FireStore().writeEvent(
                 Event(
                     editTextTitle.text.toString(),
                     editTextText.text.toString(),
                     "",
                     "",
+                    ""
                 )
-            )
+            )*/
         }
     }
 }

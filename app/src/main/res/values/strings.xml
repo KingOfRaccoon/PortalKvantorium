@@ -5,10 +5,13 @@
     <string name="fest">Мероприятия</string>
     <string name="chat">Чат</string>
 
-    <string name="enter_title">Введите название мероприятия:</string>
-    <string name="enter_text">Введите описание мероприятия:</string>
+    <string name="enter_title">Название мероприятия:</string>
+    <string name="enter_text">Описание мероприятия:</string>
 
     <string name="take_part">Учавствовать</string>
+    <string name="create">Создать</string>
+    <string name="date">Дата начала</string>
+    <string name="time">Время</string>
 
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_main">MainActivity</string>

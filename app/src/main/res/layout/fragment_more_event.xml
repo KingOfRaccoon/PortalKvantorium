@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
-            android:id="@+id/icon"
+            android:id="@+id/event_icon"
             android:layout_width="56dp"
             android:layout_height="56dp"
             android:layout_gravity="center_vertical"
@@ -106,14 +106,14 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
         android:lineSpacingMultiplier="1.4"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
-        android:text=" — международное командное соревнование, участниками которого являются школьники до 18 лет, интересующиеся инженерным творчеством и изобретательством."
+        android:text=""
         android:textColor="@color/tx_grey"
         android:textSize="15sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -121,6 +121,7 @@
         app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
 
     <Button
+        android:id="@+id/take_part"
         android:layout_width="match_parent"
         android:text="@string/take_part"
         android:textStyle="bold"

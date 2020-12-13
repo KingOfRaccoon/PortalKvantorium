@@ -1,10 +1,13 @@
 package com.kingofraccoon.portalkvantorium.Fragment
 
+import android.graphics.Color
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.ImageView
 import android.widget.TextView
 import com.kingofraccoon.portalkvantorium.Event
 import com.kingofraccoon.portalkvantorium.R
@@ -24,14 +27,27 @@ class MoreEventFragment : Fragment() {
     ): View? {
         val root = inflater.inflate(R.layout.fragment_more_event, container, false)
 
-        var title :TextView = root.findViewById(R.id.event_title)
-       // title = param1?.title
+        val title :TextView = root.findViewById(R.id.event_title)
+        val date : TextView =  root.findViewById(R.id.event_date)
+        val date_end : TextView =  root.findViewById(R.id.event_date_end)
+        val time : TextView =  root.findViewById(R.id.event_time)
+        val text : TextView =  root.findViewById(R.id.text)
+        val image : ImageView = root.findViewById(R.id.event_icon)
 
-        val date = param1?.date
-        val date_end = param1?.date
-        val time = param1?.time
-        val text = param1?.text
+        title.setText(param1?.title)
+        date.setText(param1?.date)
+        date_end.setText(param1?.date_end)
+        time.setText(param1?.time)
+        text.setText(param1?.text)
+        image.setImageResource(param1?.image!!)
 
+
+        val button : Button = root.findViewById(R.id.take_part)
+        button.setOnClickListener {
+            button.setBackgroundColor(Color.rgb(255, 194, 186))
+            button.setText("ВЫ ЗАРЕГИСТРИРОВАНЫ")
+            button.isClickable = false
+        }
 
 
         return root
