@@ -34,12 +34,15 @@ class ProfileFragment: Fragment() {
         dateUser.text = "14-02-1981"
         sexUser.text = "Мужской"
 
-        val viewPagerAdapter = ViewPagerAdapter(requireContext(), requireFragmentManager())
+/*        val viewPager2 : ViewPager2 = view.findViewById(R.id.view_pager2)
+        viewPager2.adapter = ViewPagerAdapter(this)*/
 
         val tabs : TabLayout = view.findViewById(R.id.tab_layout)
         val viewPager2 : ViewPager = view.findViewById(R.id.view_pager2)
 
+        val viewPagerAdapter = ViewPagerAdapter(requireContext(), requireFragmentManager())
         viewPager2.adapter = viewPagerAdapter
+
         tabs.setupWithViewPager(viewPager2 as ViewPager)
 
         return view
