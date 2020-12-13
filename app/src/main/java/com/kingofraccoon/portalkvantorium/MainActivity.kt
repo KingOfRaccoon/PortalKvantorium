@@ -38,21 +38,18 @@ class MainActivity : AppCompatActivity() {
         actBar.setSpan(ForegroundColorSpan(Color.rgb(78, 78, 78)), 0, title.length, Spannable.SPAN_EXCLUSIVE_EXCLUSIVE)
         supportActionBar?.setTitle(actBar)
     }
-    fun FragmentManager.setFragment(fragment: Fragment, tag: String){
-        var a = this.findFragmentByTag(tag)
-        if (a != null){
-            Log.d("SET","REPLACE")
+    fun FragmentManager.setFragment(fragment: Fragment, tag:String){
+        val frag = this.findFragmentByTag(tag)
+        if (frag != null) {
             this.beginTransaction()
-                .replace(R.id.frame, a)
-                .commit()
+                    .replace(R.id.frame, fragment)
+                    .commit()
         }
-        else
-        {
-            Log.d("SET","ADD")
+        else{
             this.beginTransaction()
-                .add(R.id.frame, fragment, tag)
-                .addToBackStack(null)
-                .commit()
+                    .add(R.id.frame, fragment, tag)
+                    .addToBackStack(null)
+                    .commit()
         }
     }
 }

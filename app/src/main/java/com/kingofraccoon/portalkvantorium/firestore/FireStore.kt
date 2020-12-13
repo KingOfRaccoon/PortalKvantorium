@@ -1,12 +1,14 @@
 package com.kingofraccoon.portalkvantorium.firestore
 
 import android.util.Log
+import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.firestore.FirebaseFirestore
 import com.kingofraccoon.portalkvantorium.Event
 
 class FireStore {
     val tag_events = "events"
     val fireStore = FirebaseFirestore.getInstance()
+    val firebase = FirebaseDatabase.getInstance()
 
     fun writeEvent(event: Event){
         val hashMap = hashMapOf(

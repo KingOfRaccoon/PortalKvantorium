@@ -13,4 +13,16 @@ class CustomListAdapter(context: Context, private var list: MutableList<String>)
             notifyDataSetChanged()
         }
     }
+    fun installList(mutableList: MutableList<String>){
+        list = mutableList
+        notifyDataSetChanged()
+    }
+
+    fun addString(string: String){
+        list.add(string)
+        notifyDataSetChanged()
+    }
+    fun getList():MutableList<String>{
+        return list
+    }
 }
