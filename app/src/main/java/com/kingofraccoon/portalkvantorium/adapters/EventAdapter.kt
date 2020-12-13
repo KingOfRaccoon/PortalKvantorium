@@ -71,13 +71,13 @@ class EventAdapter(var fragmentManager: FragmentManager): RecyclerView.Adapter<E
 
     override fun onItemMove(fromPosition: Int, toPosition: Int) {
         if (fromPosition < toPosition) {
-            for (i in fromPosition..toPosition) {
+            for (i in fromPosition until toPosition) {
                 listEvents = replace(listEvents, i, i+1)
 
             }
         }
         else{
-            for (i in fromPosition downTo toPosition step 1){
+            for (i in fromPosition downTo toPosition-1 step 1){
                 listEvents = replace(listEvents, i, i+1)
             }
         }

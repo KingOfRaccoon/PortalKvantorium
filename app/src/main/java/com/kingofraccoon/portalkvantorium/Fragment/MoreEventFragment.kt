@@ -11,6 +11,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.kingofraccoon.portalkvantorium.Event
 import com.kingofraccoon.portalkvantorium.R
+import com.kingofraccoon.portalkvantorium.User
 
 private const val ARG_PARAM1 = "param1"
 
@@ -46,6 +47,9 @@ class MoreEventFragment : Fragment() {
         button.setOnClickListener {
             button.setBackgroundColor(Color.rgb(255, 194, 186))
             button.setText("ВЫ ЗАРЕГИСТРИРОВАНЫ")
+            User.prog += 5
+            User.model += 5
+            User.konstr += 5
             button.isClickable = false
         }
 
