@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.PortalKvantorium" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimary">@color/purple_100</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/tx_grey</item>
         <!-- Secondary brand color. -->
@@ -17,6 +17,9 @@
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
+<!--    <style name="Base.Widget.Design.TabLayout" parent="android:Widget">
+        <item name="tabBackground">@drawable/tab_background</item>
+    </style>-->
 
     <style name="Theme.PortalKvantorium.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="Theme.PortalKvantorium.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />

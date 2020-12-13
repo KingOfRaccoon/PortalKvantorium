@@ -172,8 +172,10 @@
     </LinearLayout>
 
     <com.google.android.material.tabs.TabLayout
-        app:tabTextColor="@color/tx_grey"
         android:id="@+id/tab_layout"
+        app:tabSelectedTextColor="@color/tx_grey"
+        app:tabTextColor="#888888"
+        android:background="@color/white"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
